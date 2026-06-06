@@ -21,3 +21,25 @@ def afiseaza_elevi():
     for e in elevi:
         print(f"  {e['nume']}: {e['nota']}")
 
+
+
+def calculeaza_medie():
+    medie = 0
+    total_elevi = 0
+
+    for i in elevi:
+        note = i['nota']
+        medie += note
+        total_elevi += 1
+    
+    medie /= total_elevi
+    print(medie)
+
+def cel_mai_bun():
+    max_elev = None
+    Nota_Mare = 0
+    for i in elevi:
+        if i['nota'] > Nota_Mare:
+            Nota_Mare = i["nota"]
+            max_elev = i["nume"]
+    print(f"Elevul {max_elev}, are cea mai mare nota din clasa, nota {Nota_Mare}")
