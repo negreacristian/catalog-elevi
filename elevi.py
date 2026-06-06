@@ -12,7 +12,7 @@ def afiseaza_elevi():
 
 
 
-def media_pe_clasa():
+def calculeaza_medie():
     medie = 0
     total_elevi = 0
 
@@ -24,7 +24,7 @@ def media_pe_clasa():
     medie /= total_elevi
     print(medie)
 
-def nota_mare():
+def cel_mai_bun():
     max_elev = None
     Nota_Mare = 0
     for i in elevi:
