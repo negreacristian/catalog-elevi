@@ -24,3 +24,11 @@ def media_pe_clasa():
     medie /= total_elevi
     print(medie)
 
+def nota_mare():
+    max_elev = None
+    Nota_Mare = 0
+    for i in elevi:
+        if i['nota'] > Nota_Mare:
+            Nota_Mare = i["nota"]
+            max_elev = i["nume"]
+    print(f"Elevul {max_elev}, are cea mai mare nota din clasa, nota {Nota_Mare}")
