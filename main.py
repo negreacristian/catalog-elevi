@@ -1,4 +1,4 @@
-from elevi import afiseaza_elevi
+from elevi import *
 
 afiseaza_elevi()
 
