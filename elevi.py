@@ -3,6 +3,9 @@ elevi = [
     {"nume": "Mihai", "nota": 7},
     {"nume": "Elena", "nota": 8},
     {"nume": "Andrei", "nota": 6},
+    {"nume": "Andrei", "nota": 10},
+    {"nume": "Andrei", "nota": 5},
+    {"nume": "Andrei", "nota": 8},
 ]
 
 def salveaza_in_fisier():
@@ -43,3 +46,15 @@ def cel_mai_bun():
             Nota_Mare = i["nota"]
             max_elev = i["nume"]
     print(f"Elevul {max_elev}, are cea mai mare nota din clasa, nota {Nota_Mare}")
+
+def sortare_elevi():
+    lista = elevi[:]
+    print(lista)
+    for i in range(0, len(lista)):
+        for j in range(i+1, len(lista)):
+            if lista[j]['nota'] > lista[i]['nota']:
+                lista[i], lista[j] = lista[j], lista[i]
+    print(lista)
+
+
+
