@@ -1,0 +1,7 @@
+{
+    "nume": "Edi",
+    "nota": 7
+}{
+    "nume": "Mihai",
+    "nota": 5
+}
