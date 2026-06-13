@@ -1,3 +1,9 @@
+#Adaugă funcția statistica_note() în elevi.py
+#Apeleaz-o și în main.py
+#Fă review și aprobă PR-ul colegului
+
+
+
 elevi = [
     {"nume": "Ana", "nota": 9},
     {"nume": "Mihai", "nota": 7},
@@ -26,17 +32,7 @@ def afiseaza_elevi():
 
 
 
-def calculeaza_medie():
-    medie = 0
-    total_elevi = 0
 
-    for i in elevi:
-        note = i['nota']
-        medie += note
-        total_elevi += 1
-    
-    medie /= total_elevi
-    print(medie)
 
 def cel_mai_bun():
     max_elev = None
@@ -46,6 +42,32 @@ def cel_mai_bun():
             Nota_Mare = i["nota"]
             max_elev = i["nume"]
     print(f"Elevul {max_elev}, are cea mai mare nota din clasa, nota {Nota_Mare}")
+
+def cel_mai_slab():
+    min_elev = None
+    Nota_Mica = 10
+    for i in elevi:
+        if i['nota'] < Nota_Mica:
+            Nota_Mica = i["nota"]
+            min_elev = i["nume"]
+    print(f"Elevul {min_elev}, are cea mai mica nota din clasa, nota {Nota_Mica}")
+
+def medie_totala():
+    suma_note = 0
+    total_elevi = 0
+
+    for i in elevi:
+        nota = i['nota']
+        suma_note += nota
+        total_elevi += 1
+
+   
+    medie = suma_note / total_elevi
+    
+    print(f"Media totala a clasei este: {medie}")
+
+    
+
 
 def sortare_elevi():
     lista = elevi[:]
